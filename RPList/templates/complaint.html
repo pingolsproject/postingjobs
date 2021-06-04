@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>Job Finder</title>
+
+<!-- CSS Part -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</header>
+
+
+<!-- HTML Part -->
+<div class="cform">
+<body>
+ <form method="POST" action="/RPList/{{ company.id }}/add_item">
+<h1>Welcome to Job Finder</h1>
+
+<div class="container">
+ 
+<table>  
+  <h2>company information</h2>
+  <div class="row">
+    <div class="col-25">
+      <label for="background">Background:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bground" name="bground" placeholder="Background">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="capabilities">Capabilities:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="capa" name="capa" placeholder="Capabilities">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="accreditations">Accreditations:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="accr" name="accr" placeholder="Accreditations">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="stakeholders">Stakeholders:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="stake" name="stake" placeholder="Stakeholders">
+    </div>
+  </div>
+
+  <h2>Job Information</h2>
+  <div class="row">
+    <div class="col-25">
+      <label for="jobtitle">Jobtitle:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="jobt" name="jobt" placeholder="Job title">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="jobvacancy">Jobvacancy:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="jobv" name="jobv" placeholder="Job vacancy">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="jobskillsandqualifications">Job skills and qualifications:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="jobsk" name="jobsk" placeholder="Job skills and qualifications">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="position">Position:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="posi" name="posi" placeholder="Position">
+
+    </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="Jobresponsibilities">Job responsibilities:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="jobr" name="jobr" placeholder="Job responsibilities">
+    </div>
+  </div>
+      
+    </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="jobsalary">Job salary:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="jobs" name="jobs" placeholder="Job salary">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="benefits">Benefits:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bene" name="bene" placeholder="Benefits">
+      
+    </div>
+
+  </div>
+</div>
+    <h2>Job requirements</h2>
+    <div class="row">
+    <div class="col-25">
+      <label for="resume">Resume:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="resu" name="resu" placeholder="Resume">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="examination">Examination:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="exam" name="exam" placeholder="Examination">
+    </div>
+
+    <h2>Job status</h2>
+    <div class="row">
+    <div class="col-25">
+      <label for="date">Date:</label>
+    </div>
+
+    <div class="col-75">
+      <input type="text" id="dat" name="dat" placeholder="Date">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="remarks">Remarks:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="rema" name="rema" placeholder="Remarks">  
+    </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="date">Status:</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="stat" name="stat" placeholder="Status">
+    </div>
+  </div>
+  </div>
+
+  
+    
+        <input id="btnSubmit" type="submit" name="btnSubmit" value="confirm">
+  
+                    
+  </div>
+</table>
+    {%csrf_token %}
+</form>
+</div>
+</div>
+</body>
+</html>
