@@ -1,24 +1,31 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from RPList.models import Company, Companyinfo
+from RPList.models import Company, Companyinfo, Jobinformation, Jobrequirements, Jobstatus
 
 def home_page(request):
-    companyinfos=Company.objects.all()
-    return render(request, 'homepage.html',{ 'companyinfos' : companyinfos })
+    companyinfo=Companyinfo.objects.all()
+    return render(request, 'homepage.html',{'companyinfo':companyinfo})
         
-def view_list(request, company_id):
-    company_= Company.objects.get(id=company_id)
-    return render(request,'complaint.html',{ 'company' : company_ })
+
     
-def  new_list(request):
-    company_= Company.objects.create()
-    #Companyinfo.objects.create(Ccompanyname=request.POST['Jollibee'],Aaddress=request.POST['Bucandala 3,Imus Cavite'] company=company_)    
-    return redirect(f'/RPList/{company_.id}/')
+def  job1(request):
+    return render(request, 'companyinformations.html')
     
-def add_item(request, company_id):
-    company_=Company.objects.get(id=company_id)
-    #Companyinfo.objects.create(Bbackground=request.POST['Bbackground'],Ccapabilities=request.POST['Ccapabilities'],Accreditations=request.POST['Accreditations'],Accreditations=request.POST['Accreditations'],Sstakeholders=request.POST['Sstakeholders']  company=company_)
-    return redirect(f'/RPList/{company_.id}')
+def job2(request):
+    return render(request, 'jobinform.html')
+
+def job3(request):
+    return render(request, 'jobinforma.html')
+
+def job4(request):
+    return render(request, 'jobreq.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+
+
+'''
 def Datamanipulation(request):
    
     company = Company(Compny="Rose Company")
@@ -45,6 +52,7 @@ def Datamanipulation(request):
     qs = Company.objects.order_by("Aaddress")
     for x in qs:
         res += x.Ccompanyname + x.Aaddress +'<br>'
+        '''
 
 
 

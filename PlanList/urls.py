@@ -1,8 +1,13 @@
-from django.conf.urls import url
+from django.conf.urls import url , include
+from django.contrib import admin
+from django.urls import path
 from RPList import views 
 
 urlpatterns = [    
-    url(r'^$', views.home_page, name='home_page'),    
-    url(r'^RPList/new$', views.new_list, name='new_list'),    
-    url(r'^RPList/(\d+)/$', views.view_list, name='view_item'),    
-    url(r'^RPList/(\d+)/add_item$', views.add_item, name='add_item'),]
+    url(r'^$', views.home_page, name='home_page'),     
+    url('job1/', views.job1, name='job1'),    
+    url('job2/', views.job2, name='job2'),    
+    url('job3/', views.job3, name='job3'),
+    url('job4/', views.job4, name='job4'),
+    url('about/', views.about, name='about'), 
+    ]

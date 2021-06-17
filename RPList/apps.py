@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class CtlistConfig(AppConfig):
-    name = 'CTlist'
+class RplistConfig(AppConfig):
+    name = 'RPlist'

@@ -1,17 +1,156 @@
 
-<html>
-<header>
-<title>Job Finder</title>
-</header>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Finder</title>
+  <link href="style.css" link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Staatliches&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      text-align: center;
 
-body {
-  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-  color: #0000;
-  background: #0ca3d3;
-}
+    }
+    .wrapper{
+      width: 1170px;
+      margin: 0 auto;
+    }
+    header{
+      height: 100px;
+      background:#262626;
+      width: 100%;
+      z-index: 12;
+      position: fixed;
+    }
+    .logo{
+      width: 20%;
+      float: left;
+      line-height: 100px;
+    }
+    .logo a{
+      text-decoration: none;
+      font-size: 30px;
+      font-family: bignoodletitling;
+      color: #fff;
+      letter-spacing: 5px;
+    }
+    nav{
+      float: right;
+      line-height: 100px;
+    }
+    nav a{
+      text-decoration: none;
+      font-family: bignoodletitling;
+      letter-spacing: 4px;
+      font-size: 20px;
+      margin: 0 10px;
+      color: #fff;
+    }
+    .banner-area{
+      width: 100%;
+      height: 500px;
+      position:fixed;
+      top: 100px;
+      background-image: url("https://cdn4.vectorstock.com/i/1000x1000/00/83/abstract-yellow-hexagonal-design-background-vector-21580083.jpg");
+      background-color: #f8d800;
+      -webkit-background-size:cover;
+      background-size: cover;
+      background-position: center center;
+    }
+    .banner-area h2{
+      padding-top: 5%;
+      font-size: 85px;
+      font-family: 'Anton', sans-serif;
+     font-family: 'Lobster', cursive;
+     font-family: 'Staatliches', cursive;
 
-.login {
+    
+      text-transform: uppercase;
+      color: #000000;
+    }
+    .content-area{
+      width: 100%;
+      position: relative;
+      top: 450px;
+      background: #ddd;
+      height: 1500px;
+    }
+    .content-area h2{
+      font-family: bignoodletitling;
+      letter-spacing: 4px;
+      padding: 30px;
+      font-size: 40px;
+      margin: 0;
+    }
+    .content-area p{
+      padding: 2% 0;
+      font-family: merienda;
+      line-height: 30px;
+    }
+    .card{
+      width: 30%;
+      background: #ffebdc;
+      border: 1px solid #ccc;
+      transition:  0 3s;
+    }
+    .card-hearder{
+      text-align: center;
+      padding: 50 10px;
+      background:linear gradient(to right, #ff416c, #ff416c, #ff4b2b);
+      color: #fff;
+    }
+    .card-body{
+      padding: 30px 20px;
+      text-align: center;
+      font-size:24px;
+     ;
+
+    }
+    .card:hover{
+      transform: scale(1.10);
+      box-shadow: 0 0 40px -10px ;
+
+    }
+    .row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-flow: wrap;
+    }
+    .lowertext{
+      position: absolute;
+      width: 600px;
+      height: 200px;
+      margin: 10% 30%;
+      text-align: center;
+    }
+    .lowertext h1{
+      text-align: center;
+      color: 000000;
+      text-align: uppercase;
+      font-size: 60px;
+    }
+    .lowertext a{
+      border: 1px solid #fff;
+      padding: 25px 80px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-top: 20px;
+      display: inline-block;
+      color: 000000;
+    }
+    .lowertext a:hover{
+      background: #fff;
+      color: #000;
+    }
+    .login {
   position: relative;
   margin: 30px auto;
   padding: 20px 20px 20px;
@@ -41,7 +180,7 @@ body {
   font-weight: bold;
   color: #555;
   text-align: center;
-  text-shadow: 0 1px white;
+  text-shadow: 0 1px black;
   background: #f3f3f3;
   border-bottom: 1px solid #cfcfcf;
   border-radius: 20px 3px 0 0;
@@ -173,14 +312,78 @@ input[type=submit]:active {
 
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
   line-height: 34px;
-}
-</style>
-<body>
 
-<div class="login">
+    }
+    .value{
+      font-family: font-family: 'Lobster', cursive;
+    }
+    
+    </style>
+  <div class="box-area">
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#">Job Posting</a>
+        </div>
+        <nav>
+          <a href="#">Home</a>
+          <a href="/about">about</a>
+        </nav>
+      </div>
+    </header>
+    <div class="banner-area">
+      <h2>HIRE THE BEST,<br> HIRE THE ATTITUDE WITH JOB FINDER!</h2>
+    </div>
+    <div class="content-area">
+      <div class="wrapperclass">
+        <p></p>
+        <div class="row">
+          <div class="card">
+            <div class="header">
+              <br>
+              <h1>INTEGRITY</h1>
+            </div>
+            <div class="card-body">
+              <br>
+              <p> One of the factor in seeking a right candidate should know how to take responsibility in every actions, being honest about shortcomings and uphold confidentiality.   
+              </p>
+      </div>
+    </div>
+    <div class="card">
+            <div class="header">
+              <br>
+              <h1>INTELLIGENCE</h1>
+            </div>
+            <div class="card-body">
+              <br>
+              <p>
+                Hire a persons that the company could depende on most especially in problem solving and how to improve the companies in reaching their visions and best collaboration among employees in providing happier workplace. 
+              </p>
+          
+      </div>
+    </div>
+    <div class="card">
+            <div class="header">
+              <br>
+              <h1>QUALITIES</h1>
+            </div>
+            <div class="card-body">
+              <br>
+              <p>
+                Future applicant that could excellent in verbal and written communications with others aside from active listening skills. Knows how to put skills into actions, have initiatives and keen to details those are some ideal characteristics which employers are searching. 
+              </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jobvalue">
+              <br><br><br><br><br>
+                <h1>A broad range of people are turning to us to help grow and <br>add value to their businesses. From a one-man band to public listed companies, we help them.</h1><br><br>
+
+                      <div class="login">
   <h1>Company</h1>
-  <p>log in</p>
-  <form method="POST" action="/RPList/new">
+  <b>Post a job now!</b>
+  <form method="POST" action="/job1/">
     <p><input id="Compny" 
       type="text" 
       name="Compny" 
@@ -191,16 +394,17 @@ input[type=submit]:active {
       name="Addres" 
       placeholder="Address">
     </p>
- 
-      
 
-        <p class="submit"> <input id="btnSubmit" type="submit" name="btnSubmit" value="Login"></p>
+
+       <button 
+      type="submit" 
+      class="submit" 
+      id="btnContinue" 
+      name="btnContinue">Continue</button> <br>
   
 </div>
 {% csrf_token %}
 </form>
-
-
-    
-</body>
+            
 </html>
+</body>

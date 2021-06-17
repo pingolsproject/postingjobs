@@ -30,7 +30,7 @@ body {
   height: 430px;
 }
 .form-box:before {
-  background-image: url("/home/rosalyn/Desktop/bg1.jpg");
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvcnBvcmF0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -98,24 +98,25 @@ span a {
   color: #BBB;
 }
 </style>
-<form method="POST" action="/RPList/{{ company.id }}/add_item">
+<form method="POST" action="/job4/">
 <div class="form-box">
     <div class="header-text">
-      Company information
+      Job Information
     </div>
-    <input type="text" id="bground" name="bground" placeholder="Background">
-    <input type="text" id="capa" name="capa" placeholder="Capabilities">
-    <input type="text" id="accr" name="accr" placeholder="Accreditations">
-    <input type="text" id="stake" name="stake" placeholder="Stakeholders">
-    <div class="wrapper">
+    <input type="text" id="jobr" name="jobr" placeholder="Job responsibilities">
+    <input type="text" id="jobs" name="jobs" placeholder="Job salary">
+    <input type="text" id="bene" name="bene" placeholder="Benefits">
+    <input type="text" id="posi" name="posi" placeholder="Position">
+ <div class="wrapper">
     <nav class="navabout">
   </nav>
 </div>
 
 
 
+
     <button>submit</button>
   </div>
+  {% csrf_token %}
 </body>
 </html>
-
