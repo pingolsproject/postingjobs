@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Companyinfos</title>
+  <title>Jobstatus</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>  
@@ -98,42 +98,30 @@ span a {
   color: #BBB;
 }
 .wrapper{
-      width: 100px;
-      margin: 0 auto;
-      font-size: 40px;
+      width: 50px;
+      margin: 30 auto;
+      font-size: 60px;
+      color: black;
     }
 </style>
-<form method="POST">
+<form method="POST" action="">
 <div class="wrapper">
         <nav>
           <a href="http://jobpost.ph">Home</a>
         </nav>
       </div>
-
 <div class="form-box">
-    <div class="header-text">
-      Job Requirements
-    </div>
-    <input type="text" id="resu" name="resu" placeholder="Resume">
-    <input type="text" id="exam" name="exam" placeholder="Examination">
-    <div class="wrapper">
-    <nav class="navabout">
-  </nav>
-</div>
-<br>
 <div class="header-text">
   Job status
 </div>
-    <input type="text" id="dat" name="dat" placeholder="Date">
-    <input type="text" id="rema" name="rema" placeholder="Remarks">
-    <input type="text" id="stat" name="stat" placeholder="Status">
+    <input type="date" id="dat" name="dat" placeholder="dd/mm/yy" value="" required/>
+
+
+    <input type="text" id="rema" name="rema" placeholder="Remarks" value="" required/>
+    <input type="text" id="stat" name="stat" placeholder="Status" value="" required/>
     <div class="wrapper">
     <nav class="navabout">
   </nav>
-</div>
-
-
-
 
     <button>submit</button>
 

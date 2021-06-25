@@ -6,22 +6,25 @@ def home_page(request):
     companyinfo=Companyinfo.objects.all()
     return render(request, 'homepage.html',{'companyinfo':companyinfo})
         
-
     
 def  job1(request):
     return render(request, 'companyinformations.html')
     
 def job2(request):
-    return render(request, 'jobinform.html')
+    return render(request, 'jobinformations.html')
 
 def job3(request):
-    return render(request, 'jobinforma.html')
+    return render(request, 'jobrequirementss.html')
 
 def job4(request):
-    return render(request, 'jobreq.html')
+    return render(request, 'jobstatus.html')
 
 def about(request):
     return render(request, 'about.html')
+
+
+    
+
 
 
 

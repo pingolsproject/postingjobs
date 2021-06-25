@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Companyinfos</title>
+  <title>jobrequire</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>  
@@ -97,26 +97,29 @@ body {
 span a {
   color: #BBB;
 }
+.wrapper{
+      width: 100px;
+      margin: 0 auto;
+      font-size: 40px;
+    }
 </style>
 <form method="POST" action="/job4/">
+<div class="wrapper">
+      </div>
+
 <div class="form-box">
     <div class="header-text">
-      Job Information
+      Job Requirements
     </div>
-    <input type="text" id="jobr" name="jobr" placeholder="Job responsibilities">
-    <input type="text" id="jobs" name="jobs" placeholder="Job salary">
-    <input type="text" id="bene" name="bene" placeholder="Benefits">
-    <input type="text" id="posi" name="posi" placeholder="Position">
- <div class="wrapper">
+    <input type="text" id="resu" name="resu" placeholder="Resume" value="" required/>
+    <input type="text" id="exam" name="exam" placeholder="Examination" value="" required/>
+    <div class="wrapper">
     <nav class="navabout">
-  </nav>
-</div>
-
-
-
-
+  
     <button>submit</button>
+
   </div>
   {% csrf_token %}
 </body>
 </html>
+
