@@ -103,7 +103,14 @@ span a {
       font-size: 40px;
     }
 </style>
-<form method="POST" action="/job4/">
+<nav>
+
+<a href="http://jobpost.ph">Home</a> |
+<a href="/jobinformations">Job informations</a> |
+<a href="/jobrequirementss">Job Requirements</a> |
+<a href="/jobstatus">Job Status</a>
+</nav>
+<form method="POST" action="/jobstatus/">
 <div class="wrapper">
       </div>
 
@@ -118,8 +125,11 @@ span a {
   
     <button>submit</button>
 
+
   </div>
-  {% csrf_token %}
+{% csrf_token %}
+</form>
+  
 </body>
 </html>
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>job</title>
+  <body>
+
+<form method="POST" action="update/{{ companys.id }}">
+{% csrf_token %}
+
+<label for=" Company.ID">COMPANY ID</label>
+<input type="text" name="Compny" value="{{ companys.Ccompanyname }}" required="required"/>
+
+<label for="Company"COMPANY</label>
+<input type="txt" name="Addres" value="{{ companys.Aaddress }}"required="required"/>
+
+<button 
+      type="submit" 
+      class="submit" 
+      id="btnContinue" 
+      name="btnContinue">Continue</button> <br>
+</label>
+</label>
+</form>
+</body>
+</head>
+</html>
+

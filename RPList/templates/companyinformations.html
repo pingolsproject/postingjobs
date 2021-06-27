@@ -239,9 +239,32 @@ body, button, input {
   .screen-body-item {
     padding: 0;
   }
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-right: 50%;
+  margin-left: 25%;
+}
+
+td, th {
+  border: 1px solid #FFD700;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #FFD700;
 }
 </style>
-<form method="POST" action="/job2/">
+ <nav>
+
+<a href="http://jobpost.ph">Home</a> |
+<a href="/jobinformations">Job informations</a> |
+<a href="/jobrequirementss">Job Requirements</a> |
+<a href="/jobstatus">Job Status</a>
+</nav>
+<form method="POST" action="/{{company.id}}/add_item">
 <div class="background">
   <div class="container">
     <div class="screen">
@@ -290,7 +313,28 @@ body, button, input {
             <div class="app-form-group buttons">
               <button class="app-form-button">SUBMIT</button>
     </div>
+
+
+    <table>
+
+
+    {% for companyinfo in company.companyinfo_set.all %}
+    <th>Background</th>
+    <th>Capabilities</th>
+    <th>Accreditations</th>
+    <th>Stakeholders</th>
+    <tr>
+
+
+      <!{{ forloop.counter }}:  -->
+      <td>{{ forloop.counter }} : {{companyinfo.Bbackground }}</td>
+      <td>{{ companyinfo.Ccapabilities }}</td>
+      <td>{{ companyinfo.Accreditations }}</td>
+      <td>{{ companyinfo.Sstakeholder }}</td>
+    </tr>
+
     
+    </tr> {% endfor %} </table>
 </div>
 {% csrf_token %}
 </body>

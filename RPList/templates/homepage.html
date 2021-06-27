@@ -49,7 +49,7 @@
       text-decoration: none;
       font-family: bignoodletitling;
       letter-spacing: 4px;
-      font-size: 20px;
+      font-size: 15px;
       margin: 0 10px;
       color: #fff;
     }
@@ -402,6 +402,23 @@ flex: 1 0px;
 flex: 2 0px;
 }
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-right: 50%;
+  margin-left: 25%;
+}
+
+td, th {
+  border: 1px solid #FFD700;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #FFD700;
+}
 
     
     </style>
@@ -414,6 +431,9 @@ flex: 2 0px;
         <nav>
           <a href="#">Home</a>
           <a href="/about">about</a>
+          <a href="/jobinformations">Job informations</a> |
+          <a href="/jobrequirementss">Job Requirements</a> |
+          <a href="/jobstatus">Job Status</a>
 
         </nav>
       </div>
@@ -466,7 +486,7 @@ flex: 2 0px;
     <div class="login">
   <h1>Company</h1>
   <b>Post a job now!</b>
-  <form method="POST" action="/job1/">
+  <form method="POST" action="/new"> 
     <p><input id="Compny" 
       type="text" 
       name="Compny" 
@@ -490,6 +510,26 @@ flex: 2 0px;
   
 </div>
 {% csrf_token %}
+
+
+
+ 
+ <table>
+  <th>Company name</th>
+  <th>Address</th>
+  <th>edit</th>
+  <th>Delete</th>
+  {% for company in companys %}
+  <tr>    
+            <td> <a href=/{{company.id}}>{{company.Ccompanyname}}</a></td>
+            <td>{{company.Aaddress}}</td>
+            <td><a href="edit/{{company.id}}">EDIT</a></td>
+       <td><a href="delete/{{company.id}}">DELETE</a></td>
+      <br>
+    </tr>
+    </tr> {% endfor %} </table>
+  </p>
+
 
 
 <br>

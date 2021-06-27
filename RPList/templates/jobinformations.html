@@ -10,6 +10,7 @@
 
 body {
   background-color: #D4A017;
+  
 
 }
 
@@ -82,34 +83,41 @@ button:hover {
 }
 </style>
 <body>
+  <nav>
 
-<form id="regForm" form method="POST" action="/job3/">
+<a href="http://jobpost.ph">Home</a> |
+<a href="/jobinformations">Job informations</a> |
+<a href="/jobrequirementss">Job Requirements</a> |
+<a href="/jobstatus">Job Status</a>
+</nav>
+
+<form id="regForm" form method="POST" action="/jobrequirementss/">
   <h1>JOB INFORMATION</h1>
 
   <div class="tab">
-    <p><input placeholder="Job title..." oninput="this.className = ''" id="jobt" name="jobt" placeholder="Job title"</p>
+    <p><input placeholder="Job title..." oninput="this.className = ''" id="jobt" name="jobt" placeholder="Job title"></p>
 
 
   </div>
   <div class="tab">
-    <p><input placeholder="Job vacancy..." oninput="this.className = ''" id="jobv" name="jobv" placeholder="Job vacancy"</p>
+    <p><input placeholder="Job vacancy..." oninput="this.className = ''" id="jobv" name="jobv" placeholder="Job vacancy"></p>
 
-    <p><input placeholder="Skills and qualification..." oninput="this.className = ''" id="jobsk" name="jobsk" placeholder="Job skills and qualifications" </p>
+    <p><input placeholder="Skills and qualification..." oninput="this.className = ''" id="jobsk" name="jobsk" placeholder="Job skills and qualifications"></p>
   </div>
 
 
   <div class="tab">
-    <p><input placeholder="Position" oninput="this.className = ''"id="posi" name="posi" placeholder="Position"</p>
-    <p><input placeholder="Job responsibilities" oninput="this.className = ''" name="jobr" placeholder="Job responsibilities"</p>
-    <p><input placeholder="Job salary" oninput="this.className = ''" id="jobs" name="jobs" placeholder="Job salary"</p>
+    <p><input placeholder="Position" oninput="this.className = ''"id="posi" name="posi" placeholder="Position"></p>
+    <p><input placeholder="Job responsibilities" oninput="this.className = ''" name="jobr" placeholder="Job responsibilities"></p>
+    <p><input placeholder="Job salary" oninput="this.className = ''" id="jobs" name="jobs" placeholder="Job salary"></p>
   </div>
   <div class="tab">
-    <p><input placeholder="Benefits..." oninput="this.className = ''" id="bene" name="bene" placeholder="Benefits"</p>
+    <p><input placeholder="Benefits..." oninput="this.className = ''" id="bene" name="bene" placeholder="Benefits"></p>
     
-    
+
   </div>
 </body>
-{% csrf_token %}
+
 </html>
   <div style="overflow:auto;">
     <div style="float:right;">
@@ -124,7 +132,11 @@ button:hover {
     <span class="step"></span>
     <span class="step"></span>
   </div>
+  
+  </div>
+  {% csrf_token %}
 </form>
+
 
 <script>
 var currentTab = 0; 

@@ -13,7 +13,8 @@ class Companyinfo(models.Model):
 	Bbackground = models.TextField(default='')
 	Ccapabilities = models.TextField(default='')
 	Accreditations= models.TextField(default='')
-	company= models.ForeignKey(Company, default=None, on_delete=models.PROTECT)
+	Sstakeholder= models.TextField(default='')
+	company= models.ForeignKey(Company, default=None, on_delete=models.CASCADE)
 	class meta:
 	   db_table = "acompanyinfo"
 
@@ -25,14 +26,14 @@ class Jobinformation(models.Model):
 	Pposition = models.TextField(default='')
 	Jjobresponsibilities = models.TextField(default='')
 	Jjobsalary = models.TextField(default='')
-	companyinfo= models.ForeignKey(Companyinfo, default=None, on_delete=models.PROTECT)
+	companyinfo= models.ForeignKey(Companyinfo, default=None, on_delete=models.CASCADE)
 	class meta:
 	   db_table = "aJobinformation"
 
 
 class Jobrequirements(models.Model):
 	Rresume = models.TextField(default='')
-	jobinformation = models.ForeignKey(Jobinformation, default=None, on_delete=models.PROTECT)
+	jobinformation = models.ForeignKey(Jobinformation, default=None, on_delete=models.CASCADE)
 	class meta:
 	   db_table = "aJobrequirements"
 
@@ -40,7 +41,7 @@ class Jobrequirements(models.Model):
 class Jobstatus(models.Model):
 	Ddate = models.TextField(default='')
 	Rremarks = models.TextField(default='')
-	jobrequirements = models.ForeignKey(Jobrequirements, default=None, on_delete=models.PROTECT)
+	jobrequirements = models.ForeignKey(Jobrequirements, default=None, on_delete=models.CASCADE)
 	class meta:
 	  db_table = "aJobstatus"
 	
